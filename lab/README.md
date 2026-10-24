@@ -96,5 +96,9 @@ docker compose exec student bash
   `docker network rm ИМЯ` или остановите проект, которому она принадлежит.
 - **`Cannot connect to the Docker daemon` / `failed to connect to the docker API`** —
   Docker Desktop не запущен. Запустите его и дождитесь «Engine running».
+- **Компьютер ученика не достаёт до соседней сети или до delivery.test** (`traceroute` показывает
+  звёздочки после шлюза) на Linux с Docker 28 и новее — Docker отбрасывает такие пакеты на уровне
+  хоста. Выполните на своём компьютере (не в лаборатории) `sudo sysctl -w net.bridge.bridge-nf-call-iptables=0`
+  и повторите. Настройка действует до перезагрузки.
 - **Сломали сеть учебного компьютера и не можете починить** — выполните `lab reset`.
 - **Ответы пропали** — их удаляет только `docker compose down -v`.
