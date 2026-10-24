@@ -1,0 +1,47 @@
+{
+ "title": "Маршруты, NAT и границы сети",
+ "items": [
+  {
+   "key": "default_gateway",
+   "hint": "ip route, строка default via",
+   "hashes": [
+    "5594661c2d3c2d1cd1f3ff413f9744fcec769ff295f649f5b35a0af23e733ac5"
+   ]
+  },
+  {
+   "key": "first_hop",
+   "hint": "первая строка вывода traceroute",
+   "hashes": [
+    "0c1208eb64d5625aa946b8c1577518884868220731593b9e6805359669e4eb9e"
+   ]
+  },
+  {
+   "key": "my_ip",
+   "hint": "ip -4 addr show eth0",
+   "hashes": [
+    "015d37dc3835b81781d715fd9f3a36c73f8d449a4208934c8acd4df08943f550",
+    "06e4648e305a1cb5b5552e563c117fd98d7ba11e1be15542a5675cc33538e372"
+   ]
+  },
+  {
+   "key": "seen_by_server",
+   "hint": "ответ curl http://delivery.test/whoami",
+   "hashes": [
+    "5417115c47e7e878aadfce05de9629701818c45881678010dbd542cd57c5e5a1"
+   ]
+  },
+  {
+   "key": "port_8080_reason",
+   "hint": "порт 80 через тот же NAT работает, а сервер слушает оба порта",
+   "hashes": [
+    "a4179c32dfe6cdb0cd20883ae7d9dd0d8543e5c2ef9d3f388f2f8b38233b99ce"
+   ]
+  }
+ ],
+ "live": [],
+ "selfcheck": [
+  "Правило шлюза разрешает только TCP 80 и 443 наружу, остальное запрещено",
+  "NAT описан как подмена адреса, а правило доступа — как отдельное решение",
+  "Понимаю, что для расследования по внешнему адресу нужны время и записи NAT"
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "title": "TCP, UDP и порты",
+ "items": [
+  {
+   "key": "server_ip",
+   "hint": "dig +short portal.test",
+   "hashes": [
+    "115ed4e9b6980c7150bf3b99d5608a23ab4057084e3994088a7eb6810be15e78"
+   ]
+  },
+  {
+   "key": "transport",
+   "hint": "HTTP работает поверх протокола с установкой соединения",
+   "hashes": [
+    "c5e4401c66ca48a10da8027446f2c5a4b9de1958129376c188fd1ff70fb32bc5"
+   ]
+  },
+  {
+   "key": "port",
+   "hint": "стандартный порт обычного HTTP",
+   "hashes": [
+    "05e8244a2790ab4f23e1f3a86650664635af36092b846ff45b354678e6f801f4"
+   ]
+  },
+  {
+   "key": "menu_status",
+   "hint": "первая строка ответа curl -i",
+   "hashes": [
+    "d4f23e303d2894594b524b64d8d02283a538a005f6a88085691faf6945c11856"
+   ]
+  },
+  {
+   "key": "order_status",
+   "hint": "первая строка ответа curl -i",
+   "hashes": [
+    "2c9c1e786bd4a62e7c44f1b84ce8999370762d3ba62fead85bfbd0d7aec36a0a"
+   ]
+  },
+  {
+   "key": "order_tcp_ok",
+   "hint": "сервер вообще прислал ответ — значит, соединение было",
+   "hashes": [
+    "bdf2184bb917b196edd170b204232cedb66259f707bc46ed743a433cf8351b89"
+   ]
+  },
+  {
+   "key": "order_works",
+   "hint": "код 5xx означает ошибку на стороне сервера",
+   "hashes": [
+    "b560e135cf469d2a8eb6fcf925170049eeb5a904f21a226c752bfca3b49bfb23"
+   ]
+  },
+  {
+   "key": "port_8443_proto",
+   "hint": "какой из двух запросов curl к 8443 сработал?",
+   "hashes": [
+    "b8f5e23b15ffd8b6d78f3f433b329ba815c8b591915be7ad53512025ebfffae6"
+   ]
+  },
+  {
+   "key": "pcap_client_port",
+   "hint": "число после адреса 192.168.10.25 в строках с портом 80",
+   "hashes": [
+    "cbee9e9fb2fe6f8e898be63e3552aa01ecddee8eed62165eaa595138c94c4d51"
+   ]
+  },
+  {
+   "key": "pcap_server_port",
+   "hint": "число после адреса 192.168.10.10",
+   "hashes": [
+    "e7eff5f4d615ef928c07f62e601a3e490eba08421057a61eb21edb3e10f344bb"
+   ]
+  },
+  {
+   "key": "pcap_dns_transport",
+   "hint": "первые две строки записи, слово после адресов",
+   "hashes": [
+    "415a50698fb43e1aa5573d526a8121978f1c3089916055be2464a6687ca2cb37"
+   ]
+  }
+ ],
+ "live": [],
+ "selfcheck": [
+  "Не считаю номер порта доказательством того, какое приложение на нём работает",
+  "Не считаю TCP шифрованием, а установленное соединение — успешным выполнением запроса"
+ ]
+}

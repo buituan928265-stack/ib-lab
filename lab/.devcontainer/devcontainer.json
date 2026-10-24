@@ -1,0 +1,11 @@
+{
+  // Та же лаборатория в GitHub Codespaces: открывается в браузере, Docker ставить не нужно.
+  "name": "IB lab",
+  "dockerComposeFile": ["../compose.yaml"],
+  "service": "student",
+  "runServices": ["router", "portal", "archive", "delivery", "student"],
+  "workspaceFolder": "/home/student",
+  "remoteUser": "student",
+  "overrideCommand": false,
+  "shutdownAction": "stopCompose"
+}

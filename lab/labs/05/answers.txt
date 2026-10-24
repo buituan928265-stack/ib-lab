@@ -1,0 +1,18 @@
+# Урок 05. Впишите ответ после знака =.
+
+# Часть 1. Тройка для учебного веб-сервиса и результат запросов
+server_ip =        # IP-адрес portal.test
+transport =        # транспортный протокол веба (tcp/udp)
+port =             # порт обычного HTTP
+menu_status =      # код ответа на /menu
+order_status =     # код ответа на /order
+order_tcp_ok =     # для /order TCP-соединение установилось? да/нет
+order_works =      # можно ли считать, что /order работает исправно? да/нет
+
+# Часть 2
+port_8443_proto =  # что работает на 8443: http или https
+
+# Часть 3. Запись обмена
+pcap_client_port = # временный порт клиента в HTTP-обмене
+pcap_server_port = # порт сервера в HTTP-обмене
+pcap_dns_transport = # по какому протоколу шёл запрос DNS (udp/tcp)

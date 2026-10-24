@@ -1,0 +1,66 @@
+{
+ "title": "HTTPS, сертификаты и VPN",
+ "items": [
+  {
+   "key": "cert_name",
+   "hint": "subject, значение CN",
+   "hashes": [
+    "a096cc9eeae579572003a0909d35d980f086e7141aa8b01dca3cc588782f61e3"
+   ]
+  },
+  {
+   "key": "cert_issuer",
+   "hint": "issuer, значение CN",
+   "hashes": [
+    "6d77c4fadfefbfbd612c17078c6f8543db503bd3f74833fa7b956c8510dde62a"
+   ]
+  },
+  {
+   "key": "cert_not_after",
+   "hint": "notAfter; запишите как ГГГГ-ММ-ДД",
+   "hashes": [
+    "f68b93eedf44f6e23978e9169406afcfe6fe1a888c43281ab048735cebb3cff7"
+   ]
+  },
+  {
+   "key": "pay_error",
+   "hint": "сравните pay.portal.test со списком Subject Alternative Name",
+   "hashes": [
+    "cccc65efec523c8905bf01ed28ad4ad18e2b4ad6006c2e2e769eb5c5d29d7b18"
+   ]
+  },
+  {
+   "key": "old_not_after",
+   "hint": "notAfter старого файла; формат ГГГГ-ММ-ДД",
+   "hashes": [
+    "034ad0dcdbecb80d9e3712053895714e5dd3a6399f513b2eb1d48d17fae21734"
+   ]
+  },
+  {
+   "key": "old_problem",
+   "hint": "сравните notAfter с сегодняшней датой",
+   "hashes": [
+    "8fcc13a3bd2c1091d7bf35583ec91dc1bf05975ba54db0a3ac7cbb05d54ddbb0"
+   ]
+  },
+  {
+   "key": "vpn_end",
+   "hint": "туннель ведёт до входа в сеть компании",
+   "hashes": [
+    "6a245ef77671cede5fcdd5910a724f2a5a54b21f22df8a0bc91b9f6c6a0b7ae9"
+   ]
+  },
+  {
+   "key": "https_end",
+   "hint": "сертификат проверяется у того, кто отвечает на запрос сайта",
+   "hashes": [
+    "14464274a8540b746480671904c59778a7acf06301848d6f8dcf6fb0ca79b120"
+   ]
+  }
+ ],
+ "live": [],
+ "selfcheck": [
+  "Ни разу не отключал(а) проверку сертификата (curl -k)",
+  "HTTPS не назван гарантией честности сайта, VPN — гарантией анонимности"
+ ]
+}

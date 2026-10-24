@@ -1,0 +1,80 @@
+{
+ "title": "IP-адрес и подсеть",
+ "items": [
+  {
+   "key": "net_a",
+   "hint": "обнулите биты после первых 24: последнее число станет 0",
+   "hashes": [
+    "b80483f0b56fa9da2ed916c2261550b5eae4da4bb089f5f1fff8bb2a5fc72edf"
+   ]
+  },
+  {
+   "key": "net_b",
+   "hint": "обнулите биты после первых 24",
+   "hashes": [
+    "b2cd3e05c8de69737f48b1f1c53aa8b4334b2c13793ff601179d94a737e6a7c2"
+   ]
+  },
+  {
+   "key": "net_c",
+   "hint": "обнулите биты после первых 24; третье число другое",
+   "hashes": [
+    "1fed1544e35dbe5fbf505fa6504ccb247e933f7d79c285ae94a6cf587892c0c7"
+   ]
+  },
+  {
+   "key": "same_ab",
+   "hint": "сравните сети net_a и net_b",
+   "hashes": [
+    "b7c9721572bab10df4c5ee978ff50ad7f53184ae808a3be05961cf82b3dcb8f8"
+   ]
+  },
+  {
+   "key": "same_ac",
+   "hint": "сравните сети net_a и net_c",
+   "hashes": [
+    "219ef101d4de95d1f520d282a738200503a51048cc081c68308680d3c8a91c08"
+   ]
+  },
+  {
+   "key": "net_20",
+   "hint": "из числа 10 (0000 1010) в сеть входят только первые 4 бита: 0000",
+   "hashes": [
+    "bb69d53ef5af2884c6cb4f8402247c583b693be9faa7d2f5f75718f4f0b243a5"
+   ]
+  },
+  {
+   "key": "my_ip",
+   "hint": "команда ip -4 addr show eth0, строка inet; запишите с префиксом",
+   "hashes": [
+    "06e4648e305a1cb5b5552e563c117fd98d7ba11e1be15542a5675cc33538e372"
+   ]
+  },
+  {
+   "key": "my_gateway",
+   "hint": "команда ip route, строка default via",
+   "hashes": [
+    "05777b81c66ff46ea218bf2be6acf399ec4907d5c435c64afef830725b9b606f"
+   ]
+  },
+  {
+   "key": "via_archive",
+   "hint": "ip route get 192.168.11.80 — адрес после слова via",
+   "hashes": [
+    "d9688d1f02a886cb75cc0cd202daa799e0cd7fcc6f9705e8c2121248f15cea7e"
+   ]
+  },
+  {
+   "key": "portal_direct",
+   "hint": "есть ли слово via в выводе ip route get 192.168.10.10?",
+   "hashes": [
+    "b60a3060b5a2d68264729079df808f3a88aa0dcb4938fd8ab2035ec0e6949e70"
+   ]
+  }
+ ],
+ "live": [],
+ "selfcheck": [
+  "Объяснил(а), почему похожие первые цифры не доказывают одну подсеть: нужны маска или префикс",
+  "Не путаю IP-адрес с человеком: адрес принадлежит интерфейсу и может меняться"
+ ]
+}

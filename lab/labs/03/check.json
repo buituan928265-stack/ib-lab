@@ -1,0 +1,79 @@
+{
+ "title": "DHCP и DNS",
+ "items": [
+  {
+   "key": "dhcp_ip",
+   "hint": "строка DHCPACK в журнале",
+   "hashes": [
+    "c85253587fd8dc95b8588bbbd8a6cad9fddde1e6d8b9f2a33ef1569855837a44"
+   ]
+  },
+  {
+   "key": "dhcp_gateway",
+   "hint": "строка router в журнале",
+   "hashes": [
+    "f4f957d9b9464ae4cafb32739cf5b28974872d39d5dec0f7c22a35d417541c0c"
+   ]
+  },
+  {
+   "key": "dhcp_dns",
+   "hint": "строка dns-server в журнале",
+   "hashes": [
+    "3332221aab53f9fc5a11252347c06dce5c3eb2b82b85548446a36f9a472e76f0"
+   ]
+  },
+  {
+   "key": "dhcp_lease",
+   "hint": "строка lease time",
+   "hashes": [
+    "15bdd6e87e8e151206e11a92820751a8ff99c79a982cf4649572d88169c60f42",
+    "19fe9f07d31be9c994ed15e85a36a0168d793595d2b157495bb173238fa00057",
+    "8f2baa46de44c5d9a2b160daf367051919346813eb8b02f18ce5dd092605da06",
+    "f830508abfbaa1ef42c06687816c808e65776be2bd45c9a6191a87a4cde6dce3"
+   ]
+  },
+  {
+   "key": "dns_server",
+   "hint": "строка SERVER внизу вывода dig",
+   "hashes": [
+    "a4bad8e34fc92ae4d4ce6445a2521352239eb7198503a3c67612ad2c32f3b124",
+    "a9dee3e01b408954f506932b428d334e529aad8acde53bf3f7c8acff7e404302"
+   ]
+  },
+  {
+   "key": "record_type",
+   "hint": "буква в строке ответа перед адресом",
+   "hashes": [
+    "0b7653480ec2e608877c50d58f6e1c9e9be27211862cb0520d7548df9a73ec4d"
+   ]
+  },
+  {
+   "key": "portal_ip",
+   "hint": "последний столбец в ANSWER SECTION",
+   "hashes": [
+    "ecd2d3a9f3be94897560b5b28ca96266f5c4ccca129f17d46e434093ef42b9b7"
+   ]
+  },
+  {
+   "key": "ttl",
+   "hint": "число во втором столбце ANSWER SECTION",
+   "hashes": [
+    "37b947c1bc6d6618bb3601c8cf218a6d8ca74afbced20ebc55441dad94c337dd"
+   ]
+  },
+  {
+   "key": "broken_stage",
+   "hint": "по адресу сайт открывался, по имени — нет",
+   "hashes": [
+    "add12163d122936b8380adf31be4b55afd60e640135fc828d63f01f23a90d9ee"
+   ]
+  }
+ ],
+ "live": [
+  "dns_fixed"
+ ],
+ "selfcheck": [
+  "В отчёте отдельно написано, какие настройки получил клиент и какой ответ пришёл от DNS",
+  "Неверный DNS сначала назван гипотезой и только после проверки — причиной"
+ ]
+}
