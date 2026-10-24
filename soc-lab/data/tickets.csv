@@ -1,0 +1,4 @@
+ticket,date,window,change,approved_by
+CHG-5512,20.10.2026,11:00–11:30,Добавить n.sokolova в Backup Operators на SRV-BACKUP-01 и DC-01,ИТ-директор
+CHG-5490,20.10.2026,01:00–02:00,Ночное резервное копирование (svc-backup) в backup.example.com,ИТ-директор
+CHG-5520,21.10.2026,22:00–23:00,Обновление nginx на SRV-WEB-01,ИТ-директор

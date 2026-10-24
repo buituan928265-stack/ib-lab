@@ -1,0 +1,68 @@
+# Учебная лаборатория курса «Аналитик SOC первой линии».
+#
+#   opensearch   — хранилище и поиск событий (учебный SIEM)
+#   dashboards   — веб-интерфейс SIEM: http://127.0.0.1:5601
+#   loader       — один раз загружает синтетические журналы компании LAB за 20.10.2026
+#   analyst      — рабочее место аналитика: задания, проверки, сырые журналы, curl, jq, python3
+#
+# Данные полностью синтетические. Наружу опубликован только интерфейс SIEM и только
+# на 127.0.0.1. Модуль безопасности OpenSearch отключён: это учебный стенд без
+# реальных данных, доступный только с вашего компьютера.
+
+name: ib-soc-lab
+
+services:
+  opensearch:
+    image: opensearchproject/opensearch:3.8.0
+    environment:
+      discovery.type: single-node
+      OPENSEARCH_JAVA_OPTS: -Xms1g -Xmx1g
+      DISABLE_SECURITY_PLUGIN: "true"
+      DISABLE_INSTALL_DEMO_CONFIG: "true"
+    volumes:
+      - siem-data:/usr/share/opensearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -s http://localhost:9200/_cluster/health | grep -qE '\"status\":\"(green|yellow)\"'"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  dashboards:
+    image: opensearchproject/opensearch-dashboards:3.8.0
+    environment:
+      OPENSEARCH_HOSTS: '["http://opensearch:9200"]'
+      DISABLE_SECURITY_DASHBOARDS_PLUGIN: "true"
+    ports:
+      - 127.0.0.1:5601:5601
+    depends_on:
+      opensearch: { condition: service_healthy }
+    restart: unless-stopped
+
+  loader:
+    build:
+      context: .
+      dockerfile: images/loader/Dockerfile
+    image: ib-soc-lab/loader:0.1
+    depends_on:
+      opensearch: { condition: service_healthy }
+    restart: "no"
+
+  analyst:
+    build:
+      context: .
+      dockerfile: images/analyst/Dockerfile
+    image: ib-soc-lab/analyst:0.1
+    hostname: soc-analyst
+    user: analyst
+    working_dir: /home/analyst
+    environment:
+      OPENSEARCH_URL: http://opensearch:9200
+    volumes:
+      - analyst-home:/home/analyst
+    depends_on: [opensearch]
+    restart: unless-stopped
+
+volumes:
+  siem-data:
+  analyst-home:

@@ -1,0 +1,79 @@
+{
+ "title": "Правила Sigma в Security Analytics",
+ "lessons": "S24, S25, S26",
+ "items": [
+  {
+   "key": "rules",
+   "hint": "Detection rules, Source: Custom",
+   "hashes": [
+    "074ff3cd640fba92f2efd73a17d9899cf8849290f551abe8a61d798798192ce0"
+   ]
+  },
+  {
+   "key": "r1_host",
+   "hint": "откройте срабатывание этого правила",
+   "hashes": [
+    "f75aa460831796438a60f8fb702a63a51a41cdc5da9ad0817503076894c058d3"
+   ]
+  },
+  {
+   "key": "r1_proc",
+   "hint": "поле process.name в событии",
+   "hashes": [
+    "7e865e12c7bfec69ddd3c24f429948bae73dd1e84f39af1513e281c45c798838"
+   ]
+  },
+  {
+   "key": "r2_technique",
+   "hint": "теги в деталях правила или в /lab/sigma",
+   "hashes": [
+    "4e9ce67f49eeee2be30d6307f0e0b66a8153e2f0e26bfd7da1218108056ba317",
+    "8fa9ddce2528854a8b6e9d6a7442033482265e438e2f1745d53adea9cc08c647"
+   ]
+  },
+  {
+   "key": "r3_count",
+   "hint": "Findings, откройте каждое",
+   "hashes": [
+    "00fe13ac84fb01584253fc8445a2668bccd0237da68c61ead2885a9231be17f9"
+   ]
+  },
+  {
+   "key": "r3_host",
+   "hint": "поле host.name",
+   "hashes": [
+    "32b1a3c7058049d757deea2e583854664c61d02ad395cbbc76b4af59d654aed8"
+   ]
+  },
+  {
+   "key": "r3_verdict",
+   "hint": "сравните командную строку и время с заявками",
+   "hashes": [
+    "2c5f496ea0d559105234ede3f26cd1d4dcf2b0920d2c20e8a299a9f4c9c5cef0",
+    "38b9ce559eeb1ec9b4ddcdcc9337d7e64bca320ec0793adb8c59e55aa911c642",
+    "9f2364de79cc2bbd342dfbea1873616ad91aec67a43969f8432e3facea1a634f",
+    "e7fcb4d3f47dd9f8e1908af065692318152ad8963d24ce62148caf341ec68be7"
+   ]
+  },
+  {
+   "key": "r3_ticket",
+   "hint": "/lab/data/tickets.csv",
+   "hashes": [
+    "2b45a507e912993f02ab356847c30f6e35d005d37a8613f41e33972e1970a096"
+   ]
+  },
+  {
+   "key": "own_count",
+   "hint": "команда jq из шага 6 | wc -l",
+   "hashes": [
+    "52805724e0bd78ba826b806d600425600c02397b7006a9168f7b55a35ed72158"
+   ]
+  }
+ ],
+ "selfcheck": [
+  "Исключение узкое: конкретный узел и конкретный скрипт, а не все svchost.exe или весь PowerShell",
+  "Понимаю, что у исключения должны быть владелец и срок пересмотра (урок S26)",
+  "Своё правило сохранено с полем id и добавлено в детектор; после soc replay появились его срабатывания",
+  "Срабатывание правила — повод для разбора, а не готовый вывод об атаке"
+ ]
+}

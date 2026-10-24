@@ -1,0 +1,38 @@
+{
+ "title": "Журналы Linux: SSH и sudo",
+ "lessons": "S07",
+ "items": [
+  {
+   "key": "src",
+   "hint": "Failed password for invalid user … from <адрес>",
+   "hashes": [
+    "8f73bc384440ed808851a62437641ef2cb31a66bd4d42bcb2f98a7eaaa41e429"
+   ]
+  },
+  {
+   "key": "failed",
+   "hint": "grep адрес | grep Failed | wc -l",
+   "hashes": [
+    "58b0b29ca81c7d0634af23d7bc744e8ca6c9add4468cca3c625b016eba6d63a5"
+   ]
+  },
+  {
+   "key": "success",
+   "hint": "grep Accepted",
+   "hashes": [
+    "ba222e499ed5f7cecb5aa71712385db14f5fff282da6b1cec66731ad85d2bac1"
+   ]
+  },
+  {
+   "key": "sudo_cmd",
+   "hint": "строка sudo … COMMAND=",
+   "hashes": [
+    "5efd04b4d4ca13e0bd05a8c3b37201bca2b2e2b33f820718780d998042f04245"
+   ]
+  }
+ ],
+ "selfcheck": [
+  "Отличаю «invalid user» (нет такой записи) от неверного пароля существующей",
+  "Не считаю одну ошибку пароля администратора перед успешным входом атакой"
+ ]
+}

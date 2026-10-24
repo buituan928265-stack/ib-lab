@@ -1,0 +1,45 @@
+{
+ "title": "Один пароль — много учётных записей",
+ "lessons": "S19, S13",
+ "items": [
+  {
+   "key": "spray_src",
+   "hint": "всплеск 4625 около 14:00",
+   "hashes": [
+    "9760313d6f0c11c3bd3bdc4d64b9450ea377c07e3e2b7e25b46fca4bcfc585c0"
+   ]
+  },
+  {
+   "key": "spray_accounts",
+   "hint": "уникальные user.name среди 4625 с этого адреса",
+   "hashes": [
+    "74c36ec22c7e3c450f94af1c54b53403b1d514c12ad170f180e730e9005d8bb0"
+   ]
+  },
+  {
+   "key": "spray_nonexistent",
+   "hint": "winlog.substatus:0xC0000064",
+   "hashes": [
+    "4f17171eae461c90ad32e830cc85255427f4547b03459bb319dfe93fb4be283d"
+   ]
+  },
+  {
+   "key": "success_user",
+   "hint": "event.code:4624 and source.ip:<адрес>",
+   "hashes": [
+    "11c1e1da5b7602148ca589dc4c1b30549b43534e932ae4c524c53a653ab8c115"
+   ]
+  },
+  {
+   "key": "success_time",
+   "hint": "то же событие 4624",
+   "hashes": [
+    "9d34dbf64612ad5c5cdeefeb9808ec420dacfbcd4b95f34ce937c1b1178a6045"
+   ]
+  }
+ ],
+ "selfcheck": [
+  "Различаю подбор к одной записи (утро) и перебор одного пароля по многим (день)",
+  "Успешный вход после перебора отмечен как повод для эскалации"
+ ]
+}

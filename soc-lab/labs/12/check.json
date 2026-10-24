@@ -1,0 +1,31 @@
+{
+ "title": "Zeek и Suricata",
+ "lessons": "S16, S17",
+ "items": [
+  {
+   "key": "sid",
+   "hint": "suricata.alert.signature_id",
+   "hashes": [
+    "29d8f92c8e1019ab26245c68d50c2471b5550f9fd12ef27c138f0d0cc3e3a809"
+   ]
+  },
+  {
+   "key": "service",
+   "hint": "поле zeek.service",
+   "hashes": [
+    "5159a8d72dafcee09f93e674745d17d2dab6eb883d438617c9c42891b5d7a1d8"
+   ]
+  },
+  {
+   "key": "port",
+   "hint": "destination.port",
+   "hashes": [
+    "ba5e0e1bff8aeeac9490d6dba9192ce93458a70d4d47127948f631e68728de40"
+   ]
+  }
+ ],
+ "selfcheck": [
+  "Понимаю разницу: Zeek записывает факт соединения, Suricata — срабатывание правила",
+  "Алерт о большой передаче ночью сопоставлен с заявкой на резервное копирование"
+ ]
+}

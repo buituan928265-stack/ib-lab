@@ -1,0 +1,24 @@
+{
+ "title": "Маяк: считаем и группируем",
+ "lessons": "S13, S14",
+ "items": [
+  {
+   "key": "interval",
+   "hint": "сравните соседние Time",
+   "hashes": [
+    "56ef10cfe0ab68a9e1aaeb5de06c743e7ad26b6faad08d6dbbff3a8c05b79d6a"
+   ]
+  },
+  {
+   "key": "connections",
+   "hint": "число Results",
+   "hashes": [
+    "09f73ecc7cb6f642631f29d7efe376abc12782b9169a46eec74afe4858bde4c9"
+   ]
+  }
+ ],
+ "selfcheck": [
+  "Понимаю, почему ровные интервалы подозрительнее случайных",
+  "Связал DNS-запрос, процесс и сетевые подключения в одну цепочку (корреляция)"
+ ]
+}

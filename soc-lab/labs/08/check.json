@@ -1,0 +1,42 @@
+{
+ "title": "Признаки утечки данных",
+ "lessons": "S23",
+ "items": [
+  {
+   "key": "user",
+   "hint": "большой объём вечером на файлообменник",
+   "hashes": [
+    "e4bfd8da962e558e18c88e22cd9235f5c25c2fa69c4f8a766b251fe1e82c8d4b"
+   ]
+  },
+  {
+   "key": "domain",
+   "hint": "поле url.domain",
+   "hashes": [
+    "d8897f82ec35f9be61c1db268f9ad71d6d348c47f76e26d37137a62cabdc4db3"
+   ]
+  },
+  {
+   "key": "mb",
+   "hint": "Sum of network.bytes_out для этого пользователя",
+   "hashes": [
+    "53c6be906cff7786c8f68c7c3ab8cbfd3888e5d5f101c9760544551533662dfd",
+    "61f2929fb8b8080c3c1b0db7e5366a149046d79ccb9cdcd485331ff8525ee292",
+    "b4c6a280761a27936415aa95328dfc3e498e84fcef03d84e05ad7df9f916f873",
+    "deb715522e12a53dd9106178d4955a138fa3800d730692a3927e239fab7b3d97",
+    "f205c1c15b5e9db0f07b60abf9b4bd82c4215783aababd08df6384eb32d6ff1d"
+   ]
+  },
+  {
+   "key": "expected_user",
+   "hint": "заявка на резервное копирование",
+   "hashes": [
+    "4c905fee14aab36843ef8f58a083f74fba85b540f4d271ffa038205f7da86166"
+   ]
+  }
+ ],
+ "selfcheck": [
+  "Проверил направление: исходящий объём (bytes_out), а не входящий",
+  "Ожидаемая передача подтверждена заявкой, а не догадкой"
+ ]
+}

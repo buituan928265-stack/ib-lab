@@ -1,0 +1,24 @@
+{
+  "title": "SOC: задание 04. Подозрительный процесс на рабочей станции",
+  "description": "Лаборатория курса «Аналитик SOC первой линии» (Stepik)",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Задание и проверка",
+        "text": "step1.md",
+        "verify": "verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu-4GB"
+  }
+}

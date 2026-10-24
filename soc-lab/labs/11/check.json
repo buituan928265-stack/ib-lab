@@ -1,0 +1,34 @@
+{
+ "title": "Здоровье источников журналов",
+ "lessons": "S15",
+ "items": [
+  {
+   "key": "gap_source",
+   "hint": "у какого heartbeat.source пустые часы ночью",
+   "hashes": [
+    "1b847d2904978e05d369a7537cebac39034e78d56385da0a62ea6bc3446f9b00"
+   ]
+  },
+  {
+   "key": "gap_start",
+   "hint": "heartbeat приходит раз в 5 минут: найдите последний перед ночной паузой",
+   "hashes": [
+    "5879de8b8482a48ecee2cf641c9162231a6f6bea3a04b6b2b1a68fde99ee2433",
+    "6e090c44dda06d4f4e801d4c03c2d32b9389cad62a6f2539dc33d9a533e17378",
+    "d9fbbb4c500dafe17e3060b1c45476d314cf63915989e0e6d25b5de8c955bb6a"
+   ]
+  },
+  {
+   "key": "gap_end",
+   "hint": "первый heartbeat после паузы",
+   "hashes": [
+    "3baba2df5366f89fc2f9c327e291d9ba4eb788c1ab7faa4c6a225b24064a54bd",
+    "7e1ec37564641a6672cbd195c05dc2211136bee2631eca1f7733cd79ab9f5ea1"
+   ]
+  }
+ ],
+ "selfcheck": [
+  "Понимаю, что во время провала VPN кто-то работал через VPN (Zeek это показывает)",
+  "Провал в журналах записан в карточку как ограничение вывода"
+ ]
+}

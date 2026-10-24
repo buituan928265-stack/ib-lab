@@ -1,0 +1,46 @@
+{
+ "title": "Фишинговое письмо",
+ "lessons": "S18",
+ "items": [
+  {
+   "key": "sender_domain",
+   "hint": "часть адреса email.from после @",
+   "hashes": [
+    "7462c223e0117e7be1e59e5cd966608e25b13b20e538f96e6c184f1766a72a1b"
+   ]
+  },
+  {
+   "key": "delivered",
+   "hint": "event.action:delivered",
+   "hashes": [
+    "4cc9ce1ede87ca51fee1b8929742e108f6a8932c70fdffeefcd7032a261af6d8"
+   ]
+  },
+  {
+   "key": "quarantined",
+   "hint": "event.action:quarantined",
+   "hashes": [
+    "354c73753963155be029cc656e86c930bcbb301f1f5d22c19973665feb4a4ce4"
+   ]
+  },
+  {
+   "key": "reported_by",
+   "hint": "email.to:\"soc@lab.test\"",
+   "hashes": [
+    "2ba36150f94fe6266b97851c3631c29808868cddadd81e91d56b4673fed9492d"
+   ]
+  },
+  {
+   "key": "dmarc",
+   "hint": "поле mail_auth.dmarc",
+   "hashes": [
+    "f452a020f12427283b187ebaa60b5d1212d2ba273c976a186ce2024861c965ac"
+   ]
+  }
+ ],
+ "selfcheck": [
+  "Не открывал вложение и не переходил по ссылкам",
+  "Заметил, что SPF=pass не делает письмо честным",
+  "Составил список получателей, которых нужно проверить"
+ ]
+}
