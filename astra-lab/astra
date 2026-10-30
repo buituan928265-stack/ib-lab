@@ -1,0 +1,36 @@
+#!/bin/bash
+# Учебная утилита тренажёра: astra list | astra task ID | astra check ID | astra reset ID
+T=/opt/astra/tasks
+cmd=$1; id=$2
+
+need_id() {
+  if [ -z "$id" ] || [ ! -d "$T/$id" ]; then
+    echo "Укажите задание. Список: astra list"; exit 2
+  fi
+}
+
+case "$cmd" in
+  list)
+    for d in "$T"/*/; do
+      n=$(basename "$d"); t=$(head -1 "$d/task.md" | sed 's/^# *//')
+      printf '%-24s %s\n' "$n" "$t"
+    done ;;
+  task)
+    need_id
+    [ -x "$T/$id/setup.sh" ] && bash "$T/$id/setup.sh" >/dev/null 2>&1
+    echo; cat "$T/$id/task.md"; echo
+    echo "Когда закончите: astra check $id" ;;
+  check)
+    need_id
+    if bash "$T/$id/check.sh"; then
+      echo; echo "Задание $id выполнено. Код для Stepik: $(echo -n "$id-astra" | md5sum | cut -c1-6)"
+    else
+      echo; echo "Задание $id пока не выполнено. Исправьте пункты с FAIL и запустите проверку снова."; exit 1
+    fi ;;
+  reset)
+    need_id
+    [ -x "$T/$id/setup.sh" ] && bash "$T/$id/setup.sh" --reset >/dev/null 2>&1
+    echo "Задание $id подготовлено заново: astra task $id" ;;
+  *)
+    echo "Команды: astra list | astra task ID | astra check ID | astra reset ID" ;;
+esac

@@ -1,0 +1,24 @@
+{
+  "title": "Astra 13: Новый диск для архива",
+  "description": "Тренажёр «Экзамен администратора Astra Linux» (Stepik)",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh",
+      "foreground": "foreground.sh"
+    },
+    "steps": [
+      {
+        "title": "Задание и проверка",
+        "text": "step1.md",
+        "verify": "verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
