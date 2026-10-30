@@ -1,7 +1,7 @@
 clear
 echo "Готовлю учебный SIEM: скачиваю образы и загружаю журналы. Первый запуск — 5–10 минут..."
 while [ ! -f /tmp/lab-ready ]; do sleep 3; done
-cd /root/ib-lab/soc-lab
+cd /root/soc-lab
 clear
 docker compose logs loader | tail -n 3
 echo
